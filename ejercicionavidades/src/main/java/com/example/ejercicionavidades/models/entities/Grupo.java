@@ -2,6 +2,8 @@ package com.example.ejercicionavidades.models.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +23,7 @@ public class Grupo {
     @Column(name= "nombre_grupo")
     private String nombre;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "grupo")
     private List<Album> albumes;
 

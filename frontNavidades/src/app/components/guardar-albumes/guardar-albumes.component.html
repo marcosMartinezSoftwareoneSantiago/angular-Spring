@@ -1,0 +1,9 @@
+<form (ngSubmit)="enviarAlbum()">
+    <label for="nombreGrupo">Grupo </label>
+    <input type="text" name="nombreGrupo" placeholder="nombre del grupo"  [(ngModel)]="nombreGrupo" name=" ">
+    <br>
+    <label for="nombreDisco">Disco </label>
+    <input type="text" name="nombreDisco" placeholder="nombre del disco"  [(ngModel)]="nombreAlbum" name=" ">
+    <br>
+    <button type="submit">Añadir Disco</button>
+</form>

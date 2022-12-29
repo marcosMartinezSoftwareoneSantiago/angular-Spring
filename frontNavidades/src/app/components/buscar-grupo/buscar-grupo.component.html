@@ -1,0 +1,19 @@
+<form (submit)="buscarGrupo()">
+    <input type="text" placeholder="nombre del grupo" [(ngModel)]="nombreDelGrupo" name=" ">
+    <button type="submit">Buscar Discos</button>
+</form>
+<br>
+<table *ngIf="mostrarDiscos">
+    <thead>
+        <tr>
+            <th>Autor</th>
+            <th>Disco</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let album of albumes">
+            <td>{{ grupoBuscado }}</td>
+            <td>{{ album.nombre }}</td>
+        </tr>
+    </tbody>
+</table>

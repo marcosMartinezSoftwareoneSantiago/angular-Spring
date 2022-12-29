@@ -1,5 +1,7 @@
 package com.example.ejercicionavidades.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +14,13 @@ public class GrupoService {
     @Autowired
     private IGrupoDAO grupoDao;
 
-    public void save(String nombre){
+    public Grupo save(String nombre){
         Grupo grupo = new Grupo(nombre);
-        this.grupoDao.save(grupo);
+        return this.grupoDao.save(grupo);
+    }
+
+    public List<Grupo> findByNameGrupo(String nombreGrupo){
+        return grupoDao.findByNombre(nombreGrupo);
     }
     
 }
